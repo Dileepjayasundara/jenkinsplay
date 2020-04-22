@@ -1,2 +1,3 @@
 # jenkinsplay
-Create pipeline with jenkins and k8s..
+Create github CI/CD to kubernetes with jenkins
+
