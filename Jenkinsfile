@@ -20,14 +20,21 @@ pipeline {
 
     stage('Test app') {
       steps {
-
+        echo "TEST STAGE"
       }
     }
   
-  stage('Approval') {
-    
+    stage('Approval') {
       steps {
         input "Deploy to production? "
+      }
+    }
+
+  
+
+    stage('Deploy app in Production') {
+      steps {
+        echo "Production Deployment"
       }
     }
 
