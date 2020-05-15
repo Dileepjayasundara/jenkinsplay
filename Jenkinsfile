@@ -10,6 +10,14 @@ pipeline {
       }
     }
 
+    stage('Approval') {
+            // no agent, so executors are not used up when waiting for approvals
+            agent none
+            steps {
+              input "Deploy to production? "
+            }
+    }
+
     stage('Deploy App') {
       steps {
         script {
