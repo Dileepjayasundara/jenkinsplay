@@ -16,7 +16,7 @@ spec:
         app: web
     spec:
       containers:
-      - image: nginx
+      - image: 192.168.116.28:5000/nginx:latest
         name: mynginx
 
 ---
