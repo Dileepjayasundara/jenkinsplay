@@ -1,0 +1,37 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: expense-app
+  name: expense-app
+spec:
+  replicas: 5
+  selector:
+    matchLabels:
+      app: expense-app
+  template:
+    metadata:
+      labels:
+        app: expense-app
+    spec:
+      containers:
+      - image: 192.168.116.28:5000/expense-app:v1
+        name: expense-app
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app: expense-app
+  name: expense-app
+spec:
+  ports:
+  - nodePort: 37071
+    port: 37071
+    protocol: TCP
+    targetPort: 37071
+  selector:
+    app: expense-app
+  type: NodePort
