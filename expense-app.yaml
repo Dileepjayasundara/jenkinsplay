@@ -28,7 +28,7 @@ metadata:
   name: expense-app
 spec:
   ports:
-  - nodePort: 37071
+  - nodePort: 32071
     port: 37071
     protocol: TCP
     targetPort: 37071
