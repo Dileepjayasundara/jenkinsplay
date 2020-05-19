@@ -16,8 +16,9 @@ spec:
         app: expense-app
     spec:
       containers:
-      - image: 192.168.116.28:5000/expense-app:v1
-        name: expense-app
+      - name: expense-app
+        image: 192.168.116.28:5000/expense-app:v1
+        imagePullPolicy: Always
 
 ---
 apiVersion: v1
