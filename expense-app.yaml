@@ -6,7 +6,7 @@ metadata:
     app: expense-app
   name: expense-app
 spec:
-  replicas: 6
+  replicas: 1
   selector:
     matchLabels:
       app: expense-app
