@@ -20,11 +20,11 @@ spec:
         image: 192.168.116.28:5000/expense-app:v1
         imagePullPolicy: Always
         volumeMounts:
-        - name: ballerina.conf
+        - name: ballerina-config
           mountPath: "/home/ballerina/service-exp-claim/ballerina.conf"
           readOnly: true
       volumes:
-      - name: ballerina.conf
+      - name: ballerina-config
         secret:
          secretName: ballerina-config
 
