@@ -6,7 +6,7 @@ metadata:
     app: expense-app
   name: expense-app
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: expense-app
@@ -21,7 +21,7 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
         - name: ballerina-config
-          mountPath: "/home/ballerina/service-exp-claim/ballerina.conf"
+          mountPath: "/home/ballerina/service-exp-claim/ballerina.conf11"
           readOnly: true
       volumes:
       - name: ballerina-config
