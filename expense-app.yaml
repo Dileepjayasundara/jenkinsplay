@@ -21,7 +21,7 @@ spec:
         imagePullPolicy: Always
         volumeMounts:
         - name: ballerina-config
-          mountPath: "/home/ballerina/service-exp-claim/ballerina-config"
+          mountPath: "/home/ballerina/service-exp-claim/"
           readOnly: true
       volumes:
       - name: ballerina-config
