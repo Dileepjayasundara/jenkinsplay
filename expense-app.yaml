@@ -22,7 +22,6 @@ spec:
         volumeMounts:
         - name: ballerina-config
           mountPath: "/home/ballerina/service-exp-claim/config"
-          readOnly: false
       volumes:
       - name: ballerina-config
         secret:
