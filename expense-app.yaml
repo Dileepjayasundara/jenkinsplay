@@ -6,7 +6,7 @@ metadata:
     app: expense-app
   name: expense-app
 spec:
-  replicas: 1
+  replicas: 
   selector:
     matchLabels:
       app: expense-app
@@ -22,7 +22,7 @@ spec:
         volumeMounts:
         - name: ballerina-config
           mountPath: "/home/ballerina/service-exp-claim/config"
-          readOnly: true
+          readOnly: false
       volumes:
       - name: ballerina-config
         secret:
